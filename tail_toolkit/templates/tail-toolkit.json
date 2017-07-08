@@ -1,0 +1,16 @@
+{
+  "cli": {
+    "tail": {
+      "default_help": "General tail",
+      "commands": {
+        "cloudwatch": [
+          "loggroupname"
+        ]
+      }
+    }
+  },
+  "settings": {
+    "C_CONFIG_TAIL_TIME_PREVIOUS_LOG": 300000,
+    "C_CONFIG_TAIL_TIME_TO_SLEEP": 5
+  }
+}
