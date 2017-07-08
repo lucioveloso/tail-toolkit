@@ -26,5 +26,5 @@ def cli(**kwargs):
 def tail(**kwargs):
     execute_cli(kwargs)
 
-print("Initializing lambda-toolkit CLI (v" + __version__ + ") - Region: " + conf.region)
+print("Initializing tail-toolkit CLI (v" + __version__ + ") - Region: " + conf.region)
 cli()
