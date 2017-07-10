@@ -33,8 +33,7 @@ setup_options = dict(
     url='https://github.com/lucioveloso/tail-toolkit',
     scripts=['bin/tt'],
     packages=find_packages(exclude=['tests*']),
-    package_data={
-        "tail_toolkit": ["tail_toolkit/templates/*/*"]},
+    include_package_data=True,
     install_requires=requires,
     classifiers=(
         'Development Status :: 4 - Beta',

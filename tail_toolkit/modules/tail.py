@@ -8,7 +8,7 @@ import logger
 class Tail:
 
     def __init__(self, conf, kwargs):
-        self.log = logger.get_my_logger("tail")
+        self.log = logger.get_my_logger(self.__class__.__name__)
         self.conf = conf
         self.loggroupname = kwargs['loggroupname']
 

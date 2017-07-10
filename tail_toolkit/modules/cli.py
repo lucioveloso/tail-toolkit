@@ -4,7 +4,7 @@ from conf import Conf
 from utils import Utils
 import click
 from tail_toolkit import __version__
-
+import sys
 
 conf = Conf()
 
