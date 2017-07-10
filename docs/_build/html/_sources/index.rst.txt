@@ -10,6 +10,8 @@ Welcome to tail-toolkit's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   tail
+
 
 
 Indices and tables
