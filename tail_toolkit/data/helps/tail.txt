@@ -1,0 +1,6 @@
+Tail yours CloudWatch log groups                                          
+--------------------------------------------------------------------------
+
+You can specify a cloudwatch log group name to be tailed:                 
+
+lt tail                                                                   
