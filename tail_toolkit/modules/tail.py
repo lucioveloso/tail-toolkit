@@ -3,7 +3,13 @@
 import boto3
 import time
 import tail_toolkit.modules.logger as logger
+import sys
+import signal
 
+def signal_handler(signal, frame):
+    sys.exit(0)
+
+signal.signal(signal.SIGINT, signal_handler)
 
 class Tail:
 
