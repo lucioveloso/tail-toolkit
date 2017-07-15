@@ -2,7 +2,7 @@
 
 import boto3
 import time
-import logger
+import tail_toolkit.modules.logger as logger
 
 
 class Tail:
@@ -32,7 +32,7 @@ class Tail:
                         if len(response['events']) > 0:
                             if str(response['events'][len(response['events']) - 1]['message']).startswith('REPORT RequestId:'):
                                 for event in response['events']:
-                                    print event['message'].rstrip()
+                                    print(event['message'].rstrip())
 
                                 print("*************")
 

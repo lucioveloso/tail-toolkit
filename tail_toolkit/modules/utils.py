@@ -2,8 +2,8 @@
 
 import os
 import pkgutil
-import logger
-
+import tail_toolkit.modules.logger as logger
+import sys
 
 class Utils:
 
@@ -22,7 +22,7 @@ class Utils:
     @staticmethod
     def docstring_parameter(*sub):
         def dec(obj):
-            obj.__doc__ = pkgutil.get_data("tail_toolkit", os.path.join(sub[0].sett['C_HELPS_FILES'], obj.func_name + ".txt"))
+            obj.__doc__ = pkgutil.get_data("tail_toolkit", os.path.join(sub[0].sett['C_HELPS_FILES'], obj.__name__ + ".txt"))
             return obj
         return dec
 
@@ -31,7 +31,11 @@ class Utils:
         if ctx.info_name in conf.cli:
             if ctx.params['action'] in conf.cli[ctx.info_name]['commands']:
                 for check in conf.cli[ctx.info_name]['commands'][ctx.params['action']]:
-                    if isinstance(check, unicode):
+                    if sys.version_info[0] == 3:
+                        instance_type = str
+                    else:
+                        instance_type = unicode
+                    if isinstance(check, instance_type):
                         c = check.replace("-", "_")
                         if ctx.params[c] is None:
                             logger.get_my_logger("Utils").critical("The option '--" + check + "' is required");

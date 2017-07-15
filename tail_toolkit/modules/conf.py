@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import logger
+import tail_toolkit.modules.logger as logger
 import os
 import json
 import pkgutil

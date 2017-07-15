@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-from conf import Conf
-from utils import Utils
+from tail_toolkit.modules.conf import Conf
+from tail_toolkit.modules.utils import Utils
 import click
 from tail_toolkit import __version__
 import sys
